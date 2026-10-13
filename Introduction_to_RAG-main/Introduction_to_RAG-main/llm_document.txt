@@ -1,0 +1,209 @@
+A Beginner's Guide to Large Language Models (LLMs)
+
+
+==============================================================
+PAGE 1: INTRODUCTION TO LARGE LANGUAGE MODELS
+==============================================================
+
+What is a Large Language Model?
+
+A Large Language Model, often shortened to LLM, is a type of
+artificial intelligence program that can understand and generate
+human language. It can read text, answer questions, write essays,
+summarize documents, translate languages, and even write computer
+code. Popular examples of LLMs include Claude, GPT, Gemini, and
+Llama.
+
+The word "large" in the name refers to two things. First, it
+refers to the huge amount of text data used to train the model.
+Second, it refers to the enormous number of parameters the model
+contains. Parameters are the internal values the model adjusts
+during training. Modern LLMs can have billions or even trillions
+of these parameters.
+
+Why are LLMs important?
+
+Before LLMs, computers were very good at math and following exact
+rules, but they were poor at understanding everyday human language.
+Language is messy. The same word can have many meanings, and people
+express the same idea in countless different ways. LLMs changed this
+by learning the patterns of language from massive amounts of text.
+
+Today, LLMs power chatbots, virtual assistants, search engines,
+coding tools, customer support systems, and many other applications.
+They have made it possible for ordinary people to interact with
+computers using plain language instead of special commands.
+
+A short history
+
+The idea of teaching machines to understand language is old, but
+the big breakthrough came in 2017 with a design called the
+Transformer. The Transformer made it possible to train much larger
+and more capable models than ever before. After 2017, language
+models grew rapidly in size and ability, leading to the powerful
+LLMs we use today.
+
+
+==============================================================
+PAGE 2: HOW LARGE LANGUAGE MODELS WORK
+==============================================================
+
+Tokens: the building blocks
+
+LLMs do not read text the way humans do. Instead, they break text
+into small pieces called tokens. A token can be a whole word, a
+part of a word, or even a single character. For example, the word
+"unhappy" might be split into two tokens: "un" and "happy". The
+model works with these tokens as numbers.
+
+Predicting the next token
+
+At its core, an LLM does one simple thing extremely well: it
+predicts the next token in a sequence. Given some text, the model
+calculates which token is most likely to come next. It then adds
+that token and repeats the process, one token at a time, until the
+full answer is formed.
+
+This may sound simple, but by learning to predict the next token
+across billions of sentences, the model picks up grammar, facts,
+reasoning patterns, and writing styles. The result is a system that
+can hold a conversation or write a report.
+
+The Transformer and attention
+
+The engine behind modern LLMs is the Transformer architecture. Its
+key feature is a mechanism called "attention". Attention lets the
+model decide which words in a sentence are most important when
+understanding or generating each new word. For example, in the
+sentence "The cat sat on the mat because it was tired", attention
+helps the model understand that "it" refers to "the cat" and not
+"the mat".
+
+Training in two main stages
+
+LLMs are usually trained in stages. The first stage is called
+pre-training. During pre-training, the model reads enormous amounts
+of text from books, websites, and articles, learning to predict the
+next token. This gives the model broad general knowledge.
+
+The second stage is called fine-tuning. During fine-tuning, the
+model is trained on more specific examples to make it more helpful,
+safe, and aligned with what people actually want. A common
+fine-tuning method uses human feedback to teach the model which
+answers are good and which are not.
+
+
+==============================================================
+PAGE 3: STRENGTHS, LIMITATIONS, AND KEY CONCEPTS
+==============================================================
+
+What LLMs are good at
+
+LLMs are very strong at a wide range of language tasks. They can
+summarize long documents into short notes. They can answer questions
+in a natural way. They can translate between languages. They can
+write and explain computer code. They can brainstorm ideas, draft
+emails, and rewrite text in different styles. Because they learned
+from so much data, they have broad general knowledge.
+
+Limitations and challenges
+
+Despite their power, LLMs have important limitations that everyone
+should understand.
+
+The first limitation is hallucination. An LLM can sometimes produce
+information that sounds correct and confident but is actually false.
+This happens because the model predicts likely text, not verified
+facts.
+
+The second limitation is the knowledge cutoff. An LLM only knows
+about the data it was trained on. It does not automatically know
+about events that happened after its training, and it does not know
+your private documents.
+
+The third limitation is the context window. The context window is
+the maximum amount of text the model can consider at one time. If a
+document is too long, it may not fit, and the model cannot use the
+parts it cannot see.
+
+The fourth limitation is cost and speed. Larger models are more
+capable but also slower and more expensive to run.
+
+Important concepts to know
+
+A prompt is the input or instruction you give to the LLM. Writing
+clear prompts is called prompt engineering, and good prompts lead to
+better answers.
+
+Temperature is a setting that controls how creative or random the
+output is. A low temperature gives focused, predictable answers,
+while a high temperature gives more varied and creative answers.
+
+Parameters are the internal values the model learned during training.
+More parameters often mean more capability, but also higher cost.
+
+These concepts explain why two different LLMs, or even the same LLM
+with different settings, can give very different answers to the same
+question.
+
+
+==============================================================
+PAGE 4: LLMS AND RETRIEVAL-AUGMENTED GENERATION (RAG)
+==============================================================
+
+The problem RAG solves
+
+As we saw, LLMs have two big weaknesses: they can hallucinate, and
+they do not know about private or recent information beyond their
+training data. Retrieval-Augmented Generation, or RAG, is a method
+designed to fix these weaknesses.
+
+How RAG helps an LLM
+
+The idea behind RAG is simple. Instead of asking the LLM to answer
+from memory alone, we first search a collection of trusted documents
+for relevant information. We then give that information to the LLM
+along with the question. The LLM uses the provided text to write an
+accurate answer. This is like giving a student an open book during
+an exam.
+
+The basic RAG steps
+
+RAG works in three main steps. First is retrieval, where the system
+searches for the most relevant pieces of text. Second is
+augmentation, where the retrieved text is added to the user's
+question. Third is generation, where the LLM reads everything and
+produces the final answer.
+
+Why RAG and LLMs work well together
+
+RAG and LLMs are a natural match. The LLM provides strong language
+understanding and writing ability, while RAG provides fresh,
+accurate, and private information. Together they produce answers
+that are both fluent and grounded in real data.
+
+With RAG, you do not need to retrain the entire model whenever your
+information changes. You simply update the documents the system
+searches. This makes RAG a cheaper and faster way to keep an LLM
+up to date.
+
+Real-world uses of LLMs with RAG
+
+Many real applications combine LLMs with RAG. Customer support bots
+use RAG to answer questions from a company's help documents. Legal
+and medical tools use RAG to pull answers from trusted manuals.
+Personal assistants use RAG to answer questions about your own notes
+and files. Search systems use RAG to give direct answers instead of
+just a list of links.
+
+Summary
+
+A Large Language Model is an AI system that understands and generates
+human language by predicting one token at a time using the
+Transformer architecture. LLMs are powerful but limited by
+hallucination, a knowledge cutoff, and a fixed context window. RAG
+strengthens LLMs by retrieving relevant, trusted information and
+giving it to the model before it answers. This combination produces
+responses that are accurate, current, and grounded in real data,
+which is why RAG has become one of the most important techniques for
+building reliable AI applications today.
